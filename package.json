@@ -1,0 +1,26 @@
+{
+  "name": "hyggelig-timer",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vite-plugin-solid": "^2.5.0"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "pnpm": "^8.3.1",
+    "solid-js": "^1.6.10",
+    "solid-zustand": "^1.5.0",
+    "zustand": "^4.3.7"
+  }
+}
