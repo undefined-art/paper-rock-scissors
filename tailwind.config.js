@@ -1,12 +1,36 @@
-/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}',
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'class',
   theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      gray: colors.gray,
+      white: colors.white,
+      blue: colors.blue,
+      red: colors.rose,
+      pink: colors.fuchsia,
+      background: colors.gray[800],
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
+  }
+}

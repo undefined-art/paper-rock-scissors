@@ -4,14 +4,13 @@ import Result from "../types/result";
 import { generateComputerGesture } from "../helpers/generate-computer-gesture";
 import { calculateResult } from "../helpers/calculate-result";
 
-
 interface GameStore {
   playerGesture: Gesture | undefined;
   computerGesture: Gesture | undefined;
   result: Result | undefined;
   play: (gesture: Gesture) => void;
+  reset: () => void;
 }
-
 
 export const useStore = create<GameStore>((set) => ({
   playerGesture: undefined,
@@ -23,4 +22,10 @@ export const useStore = create<GameStore>((set) => ({
 
     set({ playerGesture: gesture, computerGesture, result });
   },
+  reset: () =>
+    set({
+      playerGesture: undefined,
+      computerGesture: undefined,
+      result: undefined,
+    }),
 }));
